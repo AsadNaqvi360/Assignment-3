@@ -4,6 +4,16 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+// Import dotenv to load environment variables
+const dotenv = require('dotenv');
+dotenv.config(); // Load environment variables from .env file
+
+// Import database connection function
+const connectDB = require('./config/db');
+
+// Connect to the MongoDB database
+connectDB();
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
