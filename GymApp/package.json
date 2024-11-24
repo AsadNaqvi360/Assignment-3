@@ -1,7 +1,9 @@
 {
-  "name": "my-web-app",
-  "version": "0.0.0",
+  "name": "gymapp",
+  "version": "1.0.0",
   "private": true,
+  "main": "app.js",
+  "description": "A Gym workout tracker app.",
   "scripts": {
     "start": "node ./bin/www"
   },
@@ -9,16 +11,17 @@
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "dotenv": "^16.4.5",
-    "ejs": "~2.6.1",
+    "ejs": "^3.1.9",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
-    "mongoose": "^8.8.2",
+    "mongoose": "^7.5.0",
     "morgan": "~1.9.1"
   },
-  "main": "app.js",
-  "devDependencies": {},
-  "keywords": [],
+  "engines": {
+    "node": "16.x",
+    "npm": "8.x"
+  },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "keywords": []
 }
