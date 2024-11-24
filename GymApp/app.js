@@ -10,6 +10,7 @@ dotenv.config(); // Load environment variables from .env file
 
 // Import database connection function
 const connectDB = require('./config/db');
+const workoutRoutes = require('./routes/workouts');
 
 // Connect to the MongoDB database
 connectDB();
@@ -31,6 +32,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/workouts', workoutRoutes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

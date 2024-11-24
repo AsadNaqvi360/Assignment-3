@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Workouts</title>
+</head>
+<body>
+    <h1>Workout List</h1>
+    <ul>
+        <% workouts.forEach(workout => { %>
+            <li>
+                <strong><%= workout.name %></strong> (<%= workout.type %>)
+                - <%= workout.sets %> sets, <%= workout.reps %> reps, <%= workout.restTime %> seconds rest
+            </li>
+        <% }) %>
+    </ul>
+
+    <h2>Add a New Workout</h2>
+    <form action="/workouts" method="POST">
+        <label>Name: <input type="text" name="name" required></label><br>
+        <label>Type: <input type="text" name="type" required></label><br>
+        <label>Sets: <input type="number" name="sets" required></label><br>
+        <label>Reps: <input type="number" name="reps" required></label><br>
+        <label>Rest Time (seconds): <input type="number" name="restTime" required></label><br>
+        <button type="submit">Add Workout</button>
+    </form>
+</body>
+</html>
